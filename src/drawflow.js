@@ -551,6 +551,7 @@ export default class Drawflow {
     }
     if (e.key === 'Delete' || (e.key === 'Backspace' && e.metaKey)) {
       if(this.node_selected != null) {
+        window.alert('Deletion asked');
         if(this.first_click.tagName !== 'INPUT' && this.first_click.tagName !== 'TEXTAREA' && this.first_click.hasAttribute('contenteditable') !== true) {
           this.removeNodeId(this.node_selected.id);
         }
